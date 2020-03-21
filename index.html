@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ 	<meta charset="utf-8">
+ 	<title></title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href=""/>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+
+	<!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
+	<style>
+	html,body{padding:0; margin:0;}
+	img{max-width:50vw;}
+	p{border-bottom:1px solid red; padding:10vh 3vw;}
+	/*p:nth-child(3n+1){width:50vw;}
+	p:nth-child(3n+2){width:20vw;}
+	p:nth-child(3n+3){width:30vw;}*/
+	ul{position:absolute; bottom:10px;right:10px; color:#989898; display:none;}
+	.afterButton, section#s2{display:none;}
+	@media (max-width: 767px){
+		
+	}
+
+	</style>
+
+</head>
+  
+<body>
+
+<section id='s1'>
+<p>Page 1</p>
+<p><img src="imgs/woven.jpg"/></p>
+<p><img src="imgs/use.png"/></p>
+<p><img src="imgs/im2.JPG"/></p>
+<p><img src="imgs/im3.jpg"/></p>
+<p><img src="imgs/1.JPG"/></p>
+<p><img src="imgs/style1.jpg"/></p>
+<p>Page 2</p>
+<p>Non Locality</p>
+<p><img src="imgs/im9.jpg"/></p>
+<p ><button id="b1">Don't click this</button><span style="margin-left:20px;" class="afterButton">Did anything happen?</span></p>
+<div class="afterButton">
+<p>A guideline was not followed</p>
+<p>Ad</p>
+<p><img src="imgs/painting5.jpg"/></p>
+<p><button id="b2">Start over</button></p>
+</div>
+</section>
+
+<section id="s2">
+	<p>v2</p>
+</section>
+
+<ul>
+	<li>Universe</li>
+	<li>Dream seeds</li>
+	<li>Search</li>
+	<li>Bible</li>
+	<li>Spreadsheet</li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('button#b1').on('click', function(){
+		$('button#b1').prop('disabled', true);
+		$('button#b1').html('clicked');
+		setTimeout(function(){ $('.afterButton').show() }, 1500);
+	})
+
+	$('button#b2').on('click', function(){
+		$('section#s1').hide();
+		setTimeout(function(){ $('section#s2').show() }, 1500);	
+	})
+</script>
+</body>
+</html>
