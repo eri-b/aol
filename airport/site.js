@@ -110,7 +110,8 @@ function findWeather() {
         }
 
         if(numBad ==0){
-          $('#key').append("<p class='alert'><em>No problematic days expected for the next 8 days</em></p>")
+          $('#key').append("<p class='alert'><span>No problematic days expected for the next 8 days</span></p>")
+          document.querySelector('#main-head').innerHTML = "Looks good on:";
         }
       
     }
